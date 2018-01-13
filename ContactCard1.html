@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+    <title>Contact Card1</title>
+    <link rel="stylesheet" type="text/css" href="ContactCard1.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+
+  $(document).ready(function(){
+    $("button").click(function(){
+      var first = $('.firstName').val();
+      var last = $('.lastName').val();
+      var descriptionText = $('.descriptionField').val();
+
+      $('.firstName').val("");
+      $('.lastName').val("");
+      $('.descriptionField').val("");
+
+      $('.rightSide').append("<div class='card'><div class='name'>"+
+            first + " " + last +
+            "<p>Click here for description!</p>"+
+            "</div><div class='descriptionDiv'>"+
+            descriptionText + "</div></div>");
+          });
+      $(document).on('click', ".card", function(){
+        $(this).children().toggle();
+
+        });
+		});
+    </script>
+
+</head>
+
+
+<body>
+
+      <div class="container">
+
+      <div class="leftSide">
+
+            <ul>
+                  <li>First Name: <input type="text" class="firstName" name="first_name" placeholder="First Name"></li>
+                  <li>Last Name: <input type="text" class="lastName" name="last_name" placeholder="Last Name"></li>
+            </ul>
+            <textarea rows="4" cols="50" class="descriptionField" placeholder="Enter description"></textarea>
+            <br>
+            <button>Add User</button>
+
+      </div>
+
+
+      <div class="rightSide">
+
+          <!-- <div class="card">
+              <div class="name">
+                  <p>Jimmy Dean</p>
+                  <p>Click for description</p>
+            </div>
+            <div class="description">
+            Words</div>
+        </div>
+        <div class="card">
+            <div class="name">
+                <p>Jimmy Dean</p>
+                <p>Click for description</p>
+          </div>
+          <div class="description">
+          Words</div>
+      </div>
+      <div class="card">
+          <div class="name">
+              <p>Jimmy Dean</p>
+              <p>Click for description</p>
+        </div>
+        <div class="description">
+        Words</div>
+    </div> -->
+
+
+
+      </div>
+
+</body>
+
+</html>

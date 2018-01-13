@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+
+.container {
+  width: 1000px;
+  height: 1000px;
+  background-color: purple;
+}
+
+.leftSide {
+  width: 480px;
+  height: 1000px;
+  background-color: lightblue;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.rightSide {
+  width: 480px;
+  height: 1000px;
+  background-color: pink;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 200px;
+  text-align: center;
+  height: 150px;
+}
+
+.descriptionDiv {
+  display: none;
+}
