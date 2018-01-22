@@ -3,37 +3,14 @@
 <head>
   	<meta charset="utf-8">
     <title>Contact Card1</title>
-    <link rel="stylesheet" type="text/css" href="ContactCard1.css">
+    <link rel="stylesheet" type="text/css" href="css">
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
 
-    <script>
-
-  $(document).ready(function(){
-    $("button").click(function(){
-      var first = $('.firstName').val();
-      var last = $('.lastName').val();
-      var descriptionText = $('.descriptionField').val();
-
-      $('.firstName').val("");
-      $('.lastName').val("");
-      $('.descriptionField').val("");
-
-      $('.rightSide').append("<div class='card'><div class='name'>"+
-            first + " " + last +
-            "<p>Click here for description!</p>"+
-            "</div><div class='descriptionDiv'>"+
-            descriptionText + "</div></div>");
-          });
-      $(document).on('click', ".card", function(){
-        $(this).children().toggle();
-
-        });
-		});
-    </script>
+    <script src="js/index.js"></script>
 
 </head>
 
@@ -45,10 +22,13 @@
       <div class="leftSide">
 
             <ul>
-                  <li>First Name: <input type="text" class="firstName" name="first_name" placeholder="First Name"></li>
-                  <li>Last Name: <input type="text" class="lastName" name="last_name" placeholder="Last Name"></li>
+                  <p>First Name: <input type="text" class="firstName" name="first_name" placeholder="First Name"></p>
+                  <br>
+                  <p>Last Name: <input type="text" class="lastName" name="last_name" placeholder="Last Name"></p>
             </ul>
+            <br>
             <textarea rows="4" cols="50" class="descriptionField" placeholder="Enter description"></textarea>
+            <br>
             <br>
             <button>Add User</button>
 
@@ -56,6 +36,9 @@
 
 
       <div class="rightSide">
+
+        <p>Text will appear below when ADD USER is selected!</p>
+            <p style="font-size: 10px">(SCROLL DOWN IF BOX OVERFLOWS)</p>
 
           <!-- <div class="card">
               <div class="name">

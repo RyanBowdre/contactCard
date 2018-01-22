@@ -3,27 +3,44 @@
     padding: 0px;
    }
 
-.container {
+/* .container {
   width: 1000px;
   height: 1000px;
-  background-color: purple;
-}
+  border: 3px solid black;
+} */
 
 .leftSide {
-  width: 480px;
-  height: 1000px;
-  background-color: lightblue;
+  /* width: 480px;
+  height: 1000px; */
+  border: 1px solid black;
   display: inline-block;
   vertical-align: top;
+  margin-right: 20px;
+  margin-top: 100px;
+  margin-left: 10px;
+  padding: 30px;
 
+}
+
+textarea {
+  padding: 2px;
+}
+button {
+  padding: 5px;
 }
 
 .rightSide {
   width: 480px;
-  height: 1000px;
-  background-color: pink;
+  height: 500px;
+  border: 1px solid black;
   display: inline-block;
   vertical-align: top;
+  overflow: scroll;
+  padding-top: 10px;
+}
+
+.rightSide p{
+  text-align: center;
 }
 
 .card {
